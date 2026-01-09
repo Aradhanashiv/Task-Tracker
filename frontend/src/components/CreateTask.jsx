@@ -25,7 +25,7 @@ const CreateTask = () => {
   setLoading(true);
   try {
     const payload = {title,description,priority,dueDate: date, status};
-    const result = await axios.post(`${serverUrl}/api/create-task`, payload, { withCredentials: true });
+    const result = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/create-task`, payload, { withCredentials: true });
     setTitle(""); 
     setDescription(""); 
     setPriority(""); 

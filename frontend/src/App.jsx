@@ -3,7 +3,7 @@ import {ToastContainer} from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css";
 import CreateTask from './components/CreateTask'
 import Home from './components/Home'
-export const serverUrl = "http://localhost:4000"
+// export const serverUrl = "http://localhost:4000"
 
 
 const App = () => {

@@ -8,7 +8,7 @@ const app = express()
 const port = process.env.PORT || 4001
 
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: process.env.FRONTEND_URL,
     credentials: true
 }))
 
@@ -17,7 +17,9 @@ app.use('/api', taskRoute)
  
 connectMongoDB()
 
-app.listen(port, ()=>{
-    console.log(`Server Started at ${port}`);
-})
+// app.listen(port, ()=>{
+//     console.log(`Server Started at ${port}`);
+// })
+
+export default app
 

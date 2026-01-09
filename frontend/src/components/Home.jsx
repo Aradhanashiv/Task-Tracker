@@ -14,7 +14,7 @@ const Home = () => {
     const fetchAllTasks = async () => {
       try {
         setLoading(true);
-        const result = await axios.get(`${serverUrl}/api/get-all-tasks`, {
+        const result = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/get-all-tasks`, {
           withCredentials: true,
         });
       //   console.log(result.data.tasks);
@@ -33,7 +33,7 @@ const Home = () => {
    setErr(null)
     try {
       const result = await axios.put(
-        `${serverUrl}/api/update-task/${taskId}`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/update-task/${taskId}`,
         { status: newStatus },
         { withCredentials: true }
       )
@@ -53,7 +53,7 @@ const Home = () => {
    setLoading(true)
    setErr(null)
     try {
-      const result = await axios.delete(`${serverUrl}/api/delete-task/${taskId}`, { withCredentials: true });
+      const result = await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/api/delete-task/${taskId}`, { withCredentials: true });
       setTasks((prev) => prev.filter((task) => task._id !== taskId));
       setLoading(false)
         toast.success("Task Delete Successfully", {autoClose: 3000})
