@@ -1,0 +1,11 @@
+# Backend (Node.js / Express)node_modules/
+node_modules/
+.env
+
+# Logs
+*.log
+
+# OS / IDE files
+.vscode/
+.DS_Store
+Thumbs.db
