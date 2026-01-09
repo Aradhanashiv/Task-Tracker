@@ -1,4 +1,4 @@
-import 'dotenv/config'
+// import 'dotenv/config'
 import express from 'express'
 import taskRoute from './routes/taskRoute.js'
 import connectMongoDB from './config/db.js'
